@@ -1,0 +1,26 @@
+
+{
+  "name": "Sadam Hussen Portfolio",
+  "short_name": "Sadam Portfolio",
+  "description": "Sadam Hussen - Computer Engineering Student and Full Stack Developer",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#ffffff",
+  "theme_color": "#7c3aed",
+  "icons": [
+    {
+      "src": "icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}
