@@ -1,0 +1,837 @@
+ 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Sadam Hussen | Portfolio</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        /* =========================================
+           SADAM HUSSEN - PORTFOLIO CSS
+           WHITE + ROYAL PURPLE + SKY BLUE THEME
+        ========================================= */
+
+        :root {
+            --primary: #7c3aed;
+            --primary-dark: #5b21b6;
+            --secondary: #0ea5e9;
+            --white: #ffffff;
+            --heading: #111827;
+            --text: #475569;
+            --light-bg: #f8faff;
+            --border: #e5e7eb;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 85px;
+        }
+
+        body {
+            background: var(--white);
+            color: var(--heading);
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        /* =========================================
+           NAVIGATION
+        ========================================= */
+
+        .navbar {
+            width: 100%;
+            padding: 18px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #ffffff;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+            box-shadow: 0 3px 20px rgba(0, 0, 0, 0.07);
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: 800;
+            color: #111827;
+        }
+
+        .logo span {
+            color: var(--primary);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 28px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: #334155;
+            font-size: 14px;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+
+        .menu-btn {
+            display: none;
+            font-size: 28px;
+            cursor: pointer;
+            color: var(--heading);
+        }
+
+        /* =========================================
+           HOME SECTION
+        ========================================= */
+
+        .hero {
+            min-height: 100vh;
+            padding: 130px 8% 70px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 50px;
+            background: #ffffff;
+            color: var(--heading);
+        }
+
+        .hero-content {
+            max-width: 650px;
+        }
+
+        .eyebrow {
+            display: inline-block;
+            color: var(--primary);
+            background: #f3e8ff;
+            padding: 9px 18px;
+            border-radius: 30px;
+            font-size: 13px;
+            font-weight: 600;
+            margin-bottom: 25px;
+        }
+
+        .hero h1 {
+            font-size: clamp(38px, 5vw, 65px);
+            line-height: 1.2;
+            font-weight: 800;
+            color: #111827;
+            margin-bottom: 15px;
+        }
+
+        .hero h1 span {
+            color: var(--primary);
+        }
+
+        .hero h2 {
+            font-size: 23px;
+            color: #334155;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 15px;
+            line-height: 1.9;
+            color: #64748b;
+            max-width: 570px;
+            margin-bottom: 30px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 13px 27px;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 14px;
+            transition: 0.3s;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #7c3aed, #4f46e5);
+            color: #ffffff;
+            box-shadow: 0 8px 20px rgba(124, 58, 237, 0.2);
+        }
+
+        .btn-primary:hover {
+            background: var(--primary-dark);
+            transform: translateY(-3px);
+        }
+
+        .btn-outline {
+            border: 2px solid var(--primary);
+            color: var(--primary);
+        }
+
+        .btn-outline:hover {
+            background: #f3e8ff;
+            transform: translateY(-3px);
+        }
+
+        /* Profile image */
+
+        .hero-image {
+            width: 340px;
+            height: 340px;
+            flex-shrink: 0;
+            border-radius: 50%;
+            padding: 9px;
+            background: linear-gradient(135deg, #7c3aed, #38bdf8);
+            box-shadow: 0 15px 40px rgba(124, 58, 237, 0.18);
+        }
+
+        .hero-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 5px solid #ffffff;
+        }
+
+        /* =========================================
+           ALL SECTIONS - WHITE BACKGROUND
+        ========================================= */
+
+        section:not(.hero) {
+            padding: 90px 8%;
+            background: #ffffff;
+            color: var(--heading);
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 35px;
+            font-weight: 800;
+            color: #111827;
+            margin-bottom: 15px;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            color: #64748b;
+            margin-bottom: 45px;
+        }
+
+        /* =========================================
+           ABOUT SECTION
+        ========================================= */
+
+        .about-section {
+            background: #ffffff;
+        }
+
+        .about-content {
+            max-width: 850px;
+            margin: auto;
+            padding: 35px;
+            background: #f8faff;
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            line-height: 1.9;
+            color: var(--text);
+            box-shadow: 0 8px 25px rgba(15, 23, 42, 0.05);
+            transition: 0.3s;
+        }
+
+        .about-content:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(124, 58, 237, 0.10);
+        }
+
+        .about-content h3 {
+            color: var(--primary);
+            margin-bottom: 15px;
+            font-size: 22px;
+        }
+
+        .about-content p {
+            color: var(--text);
+        }
+
+        /* =========================================
+           SKILLS SECTION
+        ========================================= */
+
+        .skills-section {
+            background: #ffffff;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 22px;
+        }
+
+        .skill-card {
+            background: #f8faff;
+            padding: 28px;
+            border-radius: 14px;
+            border: 1px solid var(--border);
+            transition: 0.3s;
+            box-shadow: 0 8px 20px rgba(15, 23, 42, 0.04);
+        }
+
+        .skill-card:hover {
+            transform: translateY(-7px);
+            border-color: #a78bfa;
+            box-shadow: 0 14px 30px rgba(124, 58, 237, 0.12);
+        }
+
+        .skill-card h3 {
+            color: var(--primary);
+            margin-bottom: 15px;
+            font-size: 19px;
+        }
+
+        .skill-card p {
+            color: var(--text);
+            line-height: 2;
+        }
+
+        /* =========================================
+           PROJECTS SECTION
+        ========================================= */
+
+        .projects-section {
+            background: #ffffff;
+        }
+
+        .project-card {
+            max-width: 700px;
+            margin: auto;
+            background: #f8faff;
+            border-radius: 15px;
+            overflow: hidden;
+            border: 1px solid var(--border);
+            box-shadow: 0 8px 25px rgba(15, 23, 42, 0.05);
+            transition: 0.3s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 15px 35px rgba(124, 58, 237, 0.10);
+        }
+
+        .project-body {
+            padding: 30px;
+        }
+
+        .project-body h3 {
+            color: var(--primary);
+            margin-bottom: 15px;
+            font-size: 22px;
+        }
+
+        .project-body p {
+            color: var(--text);
+            line-height: 1.8;
+        }
+
+        .project-body a {
+            display: inline-block;
+            margin-top: 20px;
+            color: var(--primary);
+            font-weight: 600;
+        }
+
+        .project-body a:hover {
+            color: var(--secondary);
+        }
+
+        /* =========================================
+           RESUME SECTION
+        ========================================= */
+
+        .resume-section {
+            background: #ffffff;
+            text-align: center;
+        }
+
+        .resume-section p {
+            color: var(--text);
+            margin-bottom: 25px;
+        }
+
+        /* =========================================
+           CONTACT SECTION
+        ========================================= */
+
+        .contact-section {
+            background: #ffffff;
+        }
+
+        .contact-content {
+            max-width: 650px;
+            margin: auto;
+            text-align: center;
+            background: #f8faff;
+            padding: 35px;
+            border-radius: 15px;
+            border: 1px solid var(--border);
+            box-shadow: 0 8px 25px rgba(15, 23, 42, 0.05);
+        }
+
+        .contact-content p {
+            color: var(--text);
+            line-height: 2.2;
+        }
+
+        .contact-content a {
+            color: var(--primary);
+            font-weight: 600;
+        }
+
+        .contact-content a:hover {
+            color: var(--secondary);
+        }
+
+        /* =========================================
+           FOOTER
+        ========================================= */
+
+        /* =========================================
+           FOOTER - MODERN PROFESSIONAL DESIGN
+        ========================================= */
+
+        footer {
+            background: #17152b;
+            color: #ffffff;
+            padding: 55px 8% 22px;
+            text-align: center;
+        }
+
+        .footer-content {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .footer-logo {
+            display: inline-block;
+            color: #ffffff;
+            font-size: 32px;
+            font-weight: 800;
+            margin-bottom: 10px;
+        }
+
+        .footer-logo span {
+            color: #a78bfa;
+        }
+
+        .footer-description {
+            color: #cbd5e1;
+            font-size: 14px;
+            margin-bottom: 25px;
+        }
+
+        .footer-links,
+        .footer-social {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 24px;
+            margin: 22px 0;
+        }
+
+        .footer-links a,
+        .footer-social a {
+            color: #ffffff;
+            font-size: 14px;
+            font-weight: 500;
+            transition: 0.3s;
+        }
+
+        .footer-links a:hover,
+        .footer-social a:hover {
+            color: #a78bfa;
+            transform: translateY(-2px);
+        }
+
+        .footer-divider {
+            width: 100%;
+            height: 1px;
+            background: rgba(255, 255, 255, 0.15);
+            margin: 28px 0 20px;
+        }
+
+        .footer-copyright {
+            color: #cbd5e1;
+            font-size: 13px;
+            margin: 0;
+        }
+
+        .footer-copyright span {
+            color: #a78bfa;
+            font-weight: 600;
+        }
+
+        /* =========================================
+           RESPONSIVE DESIGN
+        ========================================= */
+
+        @media(max-width: 850px) {
+
+            .hero {
+                flex-direction: column-reverse;
+                text-align: center;
+                justify-content: center;
+                padding-top: 150px;
+            }
+
+            .hero-content {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .hero-image {
+                width: 260px;
+                height: 260px;
+            }
+
+            .nav-links {
+                gap: 15px;
+            }
+        }
+
+        @media(max-width: 600px) {
+
+            .navbar {
+                padding: 17px 6%;
+            }
+
+            .menu-btn {
+                display: block;
+            }
+
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 70px;
+                left: 0;
+                width: 100%;
+                background: #ffffff;
+                flex-direction: column;
+                padding: 25px 8%;
+                box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .hero {
+                padding-left: 6%;
+                padding-right: 6%;
+            }
+
+            section:not(.hero) {
+                padding: 70px 6%;
+            }
+
+            .hero h2 {
+                font-size: 19px;
+            }
+
+            .section-title {
+                font-size: 29px;
+            }
+
+            .about-content,
+            .contact-content {
+                padding: 25px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVIGATION -->
+    <header class="navbar">
+
+        <a href="#home" class="logo">Sadam<span>.</span></a>
+
+        <div class="menu-btn" id="menuBtn">☰</div>
+
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#resume">Resume</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+
+    </header>
+
+    <!-- HOME -->
+    <section class="hero" id="home">
+
+        <div class="hero-content">
+
+            <span class="eyebrow">WELCOME TO MY PORTFOLIO</span>
+
+            <h1>I'm <span>Sadam Hussen</span></h1>
+
+            <h2>Computer Engineering Student & Full Stack Developer</h2>
+
+            <p>
+                I am a passionate Computer Engineering student at Haramaya University.
+                I enjoy programming, web development, mathematics, and solving
+                real-world problems through technology. I am continuously learning
+                and building useful digital solutions.
+            </p>
+
+            <div class="hero-buttons">
+                <a href="#projects" class="btn btn-primary">View My Projects</a>
+                <a href="#contact" class="btn btn-outline">Contact Me</a>
+            </div>
+
+        </div>
+
+        <div class="hero-image">
+            <img src="profile.jpg" alt="Sadam Hussen profile photo">
+        </div>
+
+    </section>
+
+    <!-- ABOUT -->
+    <section class="about-section" id="about">
+
+        <h2 class="section-title">About Me</h2>
+
+        <p class="section-subtitle">Get to know me</p>
+
+        <div class="about-content">
+
+            <h3>Who Am I?</h3>
+
+            <p>
+                My name is Sadam Hussen. I am a Computer Engineering student
+                at Haramaya University. I am interested in software development,
+                programming, database systems, and modern technologies.
+                My goal is to become a skilled developer and create technology
+                that solves real-world problems.
+            </p>
+
+        </div>
+
+    </section>
+
+    <!-- SKILLS -->
+    <section class="skills-section" id="skills">
+
+        <h2 class="section-title">My Skills</h2>
+
+        <p class="section-subtitle">Technologies and tools I am learning</p>
+
+        <div class="skills-grid">
+
+            <div class="skill-card">
+                <h3>Programming</h3>
+                <p>
+                    JavaScript<br>
+                    C++
+                </p>
+            </div>
+
+            <div class="skill-card">
+                <h3>Web Development</h3>
+                <p>
+                    HTML5<br>
+                    CSS3<br>
+                    React.js
+                </p>
+            </div>
+
+            <div class="skill-card">
+                <h3>Backend Development</h3>
+                <p>
+                    Node.js<br>
+                    Express.js
+                </p>
+            </div>
+
+            <div class="skill-card">
+                <h3>Database</h3>
+                <p>
+                    MySQL<br>
+                    SQL Server
+                </p>
+            </div>
+
+            <div class="skill-card">
+                <h3>Tools</h3>
+                <p>
+                    VS Code<br>
+                    Postman<br>
+                    Git & GitHub
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- PROJECTS -->
+    <section class="projects-section" id="projects">
+
+        <h2 class="section-title">My Projects</h2>
+
+        <p class="section-subtitle">Some of my work</p>
+
+        <div class="project-card">
+
+            <div class="project-body">
+
+                <h3>Online Pharmacy Management System</h3>
+
+                <p>
+                    A full-stack web application designed to manage medicines,
+                    inventory, customer orders, and pharmacy sales using
+                    web technologies and a MySQL database.
+                </p>
+
+                <a href="https://github.com/s42202413-tech/online-pharmacy-management-system-x" target="_blank">
+                    View Project on GitHub →
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- RESUME -->
+    <section class="resume-section" id="resume">
+
+        <h2 class="section-title">My Resume</h2>
+
+        <p>
+            You can download my resume to learn more about my education and skills.
+        </p>
+
+        <a href="resume.pdf" class="btn btn-primary" download>
+            Download Resume
+        </a>
+
+    </section>
+
+    <!-- CONTACT -->
+    <section class="contact-section" id="contact">
+
+        <h2 class="section-title">Contact Me</h2>
+
+        <p class="section-subtitle">Let's connect and work together</p>
+
+        <div class="contact-content">
+
+            <p>
+                Email:
+                <a href="mailto:s4220413@gmail.com">
+                    s4220413@gmail.com
+                </a>
+            </p>
+
+            <p>
+                Phone:
+                <a href="tel:+251929984766">
+                    +251 929 984 766
+                </a>
+            </p>
+
+            <p>
+                GitHub:
+                <a href="https://github.com/s42202413-tech" target="_blank">
+                    Visit My GitHub
+                </a>
+            </p>
+
+        </div>
+
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-content">
+
+            <a href="#home" class="footer-logo">Sadam<span>.</span></a>
+
+            <p class="footer-description">
+                Computer Engineering Student & Full Stack Developer
+            </p>
+
+            <div class="footer-links">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#skills">Skills</a>
+                <a href="#projects">Projects</a>
+                <a href="#resume">Resume</a>
+                <a href="#contact">Contact</a>
+            </div>
+
+            <div class="footer-social">
+                <a href="https://github.com/s42202413-tech" target="_blank" rel="noopener noreferrer">GitHub</a>
+                <a href="mailto:s4220413@gmail.com">Email</a>
+                <a href="tel:+251929984766">Phone</a>
+            </div>
+
+            <div class="footer-divider"></div>
+
+            <p class="footer-copyright">
+                © 2026 <span>Sadam Hussen</span>. All Rights Reserved.
+            </p>
+
+        </div>
+    </footer>
+
+    <!-- JAVASCRIPT -->
+    <script>
+
+        const menuBtn = document.getElementById("menuBtn");
+        const navLinks = document.getElementById("navLinks");
+
+        // Mobile navigation menu
+        menuBtn.addEventListener("click", function () {
+            navLinks.classList.toggle("active");
+        });
+
+        // Close menu after clicking a navigation link
+        document.querySelectorAll(".nav-links a").forEach(function(link) {
+
+            link.addEventListener("click", function() {
+                navLinks.classList.remove("active");
+            });
+
+        });
+
+    </script>
+
+</body>
+</html>
